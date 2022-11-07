@@ -1,6 +1,9 @@
-const { description } = require('../../package')
+import {defaultTheme, defineUserConfig} from "vuepress";
+import {backToTopPlugin} from "@vuepress/plugin-back-to-top";
+import {mediumZoomPlugin} from "@vuepress/plugin-medium-zoom";
 
-module.exports = {
+
+export default defineUserConfig({
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
@@ -8,7 +11,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
-  description: description,
+  description: "Vuepress Docs Boilerplate",
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
@@ -26,13 +29,12 @@ module.exports = {
    *
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
-  themeConfig: {
+  theme: defaultTheme({
     repo: '',
-    editLinks: false,
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
-    nav: [
+    navbar: [
       {
         text: 'Guide',
         link: '/guide/',
@@ -43,28 +45,24 @@ module.exports = {
       },
       {
         text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        link: 'https://v2.vuepress.vuejs.org'
       }
     ],
-    sidebar: {
-      '/guide/': [
+    sidebar: [
         {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
+            text: 'Guide',
+            link: '/guide/',
+            children: []
         }
-      ],
-    }
-  },
+    ]
 
-  /**
-   * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
+  }),
+
+    /**
+   * Apply plugins，ref：https://v2.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
-    '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
+        backToTopPlugin(),
+        mediumZoomPlugin({})
   ]
-}
+})

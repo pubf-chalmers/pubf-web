@@ -13,3 +13,7 @@ features:
   details: Feature 3 Description
 footer: Made by IT PubF with ❤️
 ---
+
+# Test
+<v-btn >Test</v-btn>
+<v-alert v-ripple type="success" variant="tonal">Test</v-alert>

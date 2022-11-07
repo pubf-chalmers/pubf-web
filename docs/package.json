@@ -13,7 +13,12 @@
     "build": "vuepress build src"
   },
   "license": "MIT",
-  "devDependencies": {
-    "vuepress": "^2.0.O"
+  "dependencies": {
+    "vue-class-component": "8.0.0-rc.1",
+    "vue-property-decorator": "^9.1.2",
+    "vuepress": "2.0.O-beta.53",
+    "vuetify": "^3.0.0",
+    "@vuepress/plugin-back-to-top": "2.0.0-beta.53",
+    "@vuepress/plugin-medium-zoom": "2.0.0-beta.53"
   }
 }
