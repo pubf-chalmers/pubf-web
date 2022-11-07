@@ -1,0 +1,19 @@
+{
+  "name": "pubf-web",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "authors": {
+    "name": "IT PubF",
+    "email": "pubf@pubf.se"
+  },
+  "repository": "/pubf-web",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^2.0.O"
+  }
+}
