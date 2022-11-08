@@ -1,6 +1,7 @@
-import {defaultTheme, defineUserConfig} from "vuepress";
+import {defaultTheme, defineUserConfig, viteBundler} from "vuepress";
 import {backToTopPlugin} from "@vuepress/plugin-back-to-top";
 import {mediumZoomPlugin} from "@vuepress/plugin-medium-zoom";
+import {PubfTheme} from "./theme/theme";
 
 
 export default defineUserConfig({
@@ -19,9 +20,11 @@ export default defineUserConfig({
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/vuetify@3.0.0/dist/vuetify.min.css' }],
+    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css' }],
   ],
 
   /**
@@ -29,40 +32,11 @@ export default defineUserConfig({
    *
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
-  theme: defaultTheme({
-    repo: '',
-    docsDir: '',
-    editLinkText: '',
-    lastUpdated: false,
-    navbar: [
-      {
-        text: 'Guide',
-        link: '/guide/',
-      },
-      {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v2.vuepress.vuejs.org'
-      }
-    ],
-    sidebar: [
-        {
-            text: 'Guide',
-            link: '/guide/',
-            children: []
-        }
-    ]
-
-  }),
+  theme: PubfTheme({}),
 
     /**
    * Apply plugins，ref：https://v2.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
-        backToTopPlugin(),
-        mediumZoomPlugin({})
   ]
 })

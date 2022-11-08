@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "authors": {
     "name": "IT PubF",
     "email": "pubf@pubf.se"
@@ -14,11 +15,15 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@vuepress/plugin-back-to-top": "2.0.0-beta.53",
+    "@vuepress/plugin-medium-zoom": "2.0.0-beta.53",
+    "node-sass": "^7.0.3",
+    "sass": "^1.56.0",
+    "sass-loader": "^13.1.0",
+    "unplugin-vue-components": "^0.22.9",
     "vue-class-component": "8.0.0-rc.1",
     "vue-property-decorator": "^9.1.2",
     "vuepress": "2.0.O-beta.53",
-    "vuetify": "^3.0.0",
-    "@vuepress/plugin-back-to-top": "2.0.0-beta.53",
-    "@vuepress/plugin-medium-zoom": "2.0.0-beta.53"
+    "vuetify": "^3.0.0"
   }
 }

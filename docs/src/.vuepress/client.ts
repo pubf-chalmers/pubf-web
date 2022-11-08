@@ -10,11 +10,5 @@ import * as vuetifyDirectives from "vuetify/directives";
  */
 
 export default defineClientConfig({
-    enhance({app}){
-        const vuetify = createVuetify({
-            components: vuetifyComponents,
-            directives: vuetifyDirectives,
-        })
-        app.use(vuetify)
-    }
+    // see also theme/client.ts
 })
