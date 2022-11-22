@@ -419,7 +419,7 @@
     markdown-it-emoji "^2.0.2"
     mdurl "^1.0.1"
 
-"@vuepress/plugin-active-header-links@2.0.0-beta.53":
+"@vuepress/plugin-active-header-links@2.0.0-beta.53", "@vuepress/plugin-active-header-links@^2.0.0-beta.53":
   version "2.0.0-beta.53"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-active-header-links/-/plugin-active-header-links-2.0.0-beta.53.tgz#08b4a196a659b06fe386d04e824ffaa31ddd0e58"
   integrity sha512-rlDQ4CpF/awzHN6l6c5C4/bbiAZisZ2Z9cP2GJJBbxIb6QA6GOrIoHMt6L+9321Q+/jmntjoRJT4yHP/jg8OMA==
@@ -487,7 +487,7 @@
     medium-zoom "^1.0.6"
     vue "^3.2.41"
 
-"@vuepress/plugin-nprogress@2.0.0-beta.53":
+"@vuepress/plugin-nprogress@2.0.0-beta.53", "@vuepress/plugin-nprogress@^2.0.0-beta.53":
   version "2.0.0-beta.53"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-nprogress/-/plugin-nprogress-2.0.0-beta.53.tgz#7e83e959180b74e6026f3c15e4e92479ba1f72c3"
   integrity sha512-xO8Dqw1yCttY6N+jDpuwE3RG+jQVPE0EieRafTWRO+fGCFobGa/6Zldc4x3+alB2xyXwFAy2495NYgPudNIWeQ==
@@ -3116,10 +3116,10 @@ vuepress@2.0.O-beta.53:
   dependencies:
     vuepress-vite "2.0.0-beta.53"
 
-vuetify@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-3.0.0.tgz#372eed0663f0ffba53439cd99aa46031e560b0f4"
-  integrity sha512-0olLmKWb+oTaebGTM02+1fWaAgnGDuIt86K3jDv2LnALQ2atSzhDS1SSASJsJCZ2PgFBdDAeJVLcNWWavRYAlQ==
+vuetify@^3.0.1:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-3.0.2.tgz#734166f0800e47b9d4a7e714b943534d91b0579d"
+  integrity sha512-d+lb8DHUrrn9GnKaZW1dEApjIEamUcZn1HxomiQ0+y8t+jKjktpruo16AvAjpEHhAcCeWZ5RuK/S9HdT6z68Uw==
 
 wcwidth@^1.0.1:
   version "1.0.1"
