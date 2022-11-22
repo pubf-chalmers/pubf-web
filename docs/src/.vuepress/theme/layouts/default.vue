@@ -28,12 +28,12 @@
                 </v-list-item>
                 <v-list-item
                     class="sidebar-item"
-                    v-for="header of $page.headers"
+                    v-for="header of pageHeaders"
                     :key="header.slug"
                     :to="header.link"
                     :active="$router.currentRoute.value.hash === header.link"
                 >
-                    <v-list-item-title> {{ header.title }} </v-list-item-title>
+                    <v-list-item-title :style="'margin-left:' + (header.level - 2) * 8 + 'px; font-size: ' + (0.8 - (header.level - 2) * 0.07)  + 'em;' "> {{ header.title }} </v-list-item-title>
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>
@@ -46,18 +46,27 @@ import BasicLayout from "../components/basicLayout.vue";
 
 @Options({
     components: {
-        BasicLayout,
+        BasicLayout
     }
 })
 export default class DefaultLayout extends Vue {
     showBtn = false;
 
-    mounted(){
-        console.log((this as any).$page.headers)
-    }
-
     onScroll(isIntersecting: boolean) {
         this.showBtn = !isIntersecting;
+    }
+
+    get pageHeaders(){
+        const flatten = (a: any[]) => {
+            const arr = []
+            for (const h of a){
+                arr.push(h, ...flatten(h.children))
+            }
+            console.log(arr)
+            return arr
+        }
+
+        return flatten((this as any).$page.headers)
     }
 }
 </script>
