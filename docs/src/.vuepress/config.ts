@@ -2,6 +2,8 @@ import {defaultTheme, defineUserConfig, viteBundler} from "vuepress";
 import {backToTopPlugin} from "@vuepress/plugin-back-to-top";
 import {mediumZoomPlugin} from "@vuepress/plugin-medium-zoom";
 import {PubfTheme} from "./theme/theme";
+import {activeHeaderLinksPlugin} from "@vuepress/plugin-active-header-links";
+import {nprogressPlugin} from "@vuepress/plugin-nprogress";
 
 
 export default defineUserConfig({
@@ -38,5 +40,9 @@ export default defineUserConfig({
    * Apply plugins，ref：https://v2.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
+        activeHeaderLinksPlugin({
+              offset: 150
+          }),
+        nprogressPlugin()
   ]
 })

@@ -27,4 +27,8 @@ export default class Basic extends Vue {}
         background-position: center;
         background-attachment: fixed;
     }
+
+    :root {
+        --nprogress-color: #CF1312 !important;
+    }
 </style>
